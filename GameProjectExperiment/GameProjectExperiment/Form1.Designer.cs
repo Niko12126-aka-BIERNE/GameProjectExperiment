@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             windowFrame = new PictureBox();
             StartGame = new Button();
+            timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)windowFrame).BeginInit();
             SuspendLayout();
             // 
@@ -53,6 +55,11 @@
             StartGame.UseVisualStyleBackColor = true;
             StartGame.Click += StartGameClicked;
             // 
+            // timer
+            // 
+            timer.Interval = 5;
+            timer.Tick += TimerTicked;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -60,8 +67,11 @@
             ClientSize = new Size(1561, 936);
             Controls.Add(StartGame);
             Controls.Add(windowFrame);
+            KeyPreview = true;
             Name = "Form1";
             Text = "Form1";
+            KeyDown += FormKeyDown;
+            KeyUp += FormKeyUp;
             ((System.ComponentModel.ISupportInitialize)windowFrame).EndInit();
             ResumeLayout(false);
         }
@@ -70,5 +80,6 @@
 
         private PictureBox windowFrame;
         private Button StartGame;
+        private System.Windows.Forms.Timer timer;
     }
 }
