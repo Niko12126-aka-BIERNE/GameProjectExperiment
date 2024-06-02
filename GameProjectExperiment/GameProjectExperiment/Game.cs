@@ -21,7 +21,7 @@ namespace GameProjectExperiment
             FrameSize = frameSize;
             Frame = new Frame(frameSize);
 
-            sprites = [new MovingSprite(new Location(100, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\AddBTN.png"))];
+            sprites = [new MovingBoundedSprite(new Location(100, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\AddBTN.png"), frameSize)];
 
             FrameDeltaTimer.Start();
         }

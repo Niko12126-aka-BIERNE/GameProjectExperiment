@@ -23,8 +23,11 @@ namespace GameProjectExperiment
                 {
                     Location pixelLocation = new(x + xOffset, y + yOffset);
                     
-                    //TODO: handle transparrent pixels...
-                    Image.SetPixel(pixelLocation.XCoordinate, pixelLocation.YCoordinate, sprite.Image.GetPixel(x, y));
+                    if (pixelLocation.XCoordinate < size.Width && pixelLocation.XCoordinate >= 0 && pixelLocation.YCoordinate < size.Height && pixelLocation.YCoordinate >= 0)
+                    {
+                        //TODO: handle transparrent pixels...
+                        Image.SetPixel(pixelLocation.XCoordinate, pixelLocation.YCoordinate, sprite.Image.GetPixel(x, y));
+                    }
                 }
             }
         }
