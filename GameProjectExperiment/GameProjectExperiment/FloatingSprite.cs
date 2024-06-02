@@ -12,7 +12,7 @@ namespace GameProjectExperiment
 
         public override void UpdateLocation(long deltaTime)
         {
-            if (CollidesWithGameBox())
+            if (CollidesWithGameBox() || ObjectCollisionHandler.AnyObjectCollideWith(this))
             {
                 direction *= -1;
             }

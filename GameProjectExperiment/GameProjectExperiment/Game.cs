@@ -13,7 +13,7 @@ namespace GameProjectExperiment
         public Size FrameSize { get; private set; }
         public Frame Frame { get; private set; }
 
-        private List<Sprite> sprites;
+        public static List<Sprite> sprites;
 
         public Game(Size frameSize)
         {
@@ -21,7 +21,7 @@ namespace GameProjectExperiment
             FrameSize = frameSize;
             Frame = new Frame(frameSize);
 
-            sprites = [new MovingBoundedSprite(new Location(100, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\AddBTN.png"), frameSize)];
+            sprites = [new MovingBoundedSprite(new Location(100, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\AddBTN.png"), frameSize), new FloatingSprite(new Location(200, 200), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\RemoveBTN.png"), frameSize)];
 
             FrameDeltaTimer.Start();
         }
