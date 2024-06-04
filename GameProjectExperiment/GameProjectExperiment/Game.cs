@@ -21,7 +21,7 @@ namespace GameProjectExperiment
             FrameSize = frameSize;
             Frame = new Frame(frameSize);
 
-            sprites = [new MovingBoundedSprite(new Location(100, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\AddBTN.png"), frameSize), new FloatingSprite(new Location(200, 200), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\RemoveBTN.png"), frameSize)];
+            sprites = [new MovingBoundedSprite(new Location(50, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\AddBTN.png"), frameSize), new MovingBoundedSprite(new Location(frameSize.Width - 50, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\AddBTN.png"), frameSize), new PongBallSprite(new Location(300, 100), new Bitmap("C:\\Users\\niko1\\OneDrive\\Pictures\\RemoveBTN.png"), frameSize)];
 
             FrameDeltaTimer.Start();
         }

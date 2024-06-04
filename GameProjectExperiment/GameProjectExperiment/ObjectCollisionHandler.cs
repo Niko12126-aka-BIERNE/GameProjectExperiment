@@ -8,13 +8,41 @@ namespace GameProjectExperiment
 {
     internal class ObjectCollisionHandler
     {
+        public static bool ObjectCollidesWithGameBox(Sprite object1, Size gameBox)
+        {
+            if (object1.Location.XCoordinate - object1.Image.Width / 2 <= 0)
+            {
+                return true;
+            }
+
+            if (object1.Location.XCoordinate + object1.Image.Width / 2 >= gameBox.Width)
+            {
+                return true;
+            }
+
+            if (object1.Location.YCoordinate - object1.Image.Height / 2 <= 0)
+            {
+                return true;
+            }
+
+            if (object1.Location.YCoordinate + object1.Image.Height / 2 >= gameBox.Height)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public static bool AnyObjectCollideWith(Sprite object1)
         {
             foreach (Sprite object2 in Game.sprites)
             {
                 if (object1 != object2)
                 {
-                    return ObjectsCollide(object1, object2);
+                    if (ObjectsCollide(object1, object2))
+                    {
+                        return true;
+                    }
                 }
             }
 
