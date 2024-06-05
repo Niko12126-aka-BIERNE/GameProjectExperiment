@@ -14,7 +14,7 @@ namespace GameProjectExperiment
 
         public static void GameLoop()
         {
-            double maxFPS = 10;
+            double maxFPS = 60;
             double minFramePeriodMsec = 1000d / maxFPS;
 
             Game game = new(new Size(1536, 864));

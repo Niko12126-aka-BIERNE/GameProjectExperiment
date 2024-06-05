@@ -32,7 +32,7 @@ namespace GameProjectExperiment
             if (ObjectCollisionHandler.AnyObjectCollideWith(this))
             {
                 horizontalDirection *= -1;
-                speedBonus += 5;
+                speedBonus += 2;
             }
 
             Location.YCoordinate += (int)((double)deltaTime / 1000 * 50 * verticalDirection);

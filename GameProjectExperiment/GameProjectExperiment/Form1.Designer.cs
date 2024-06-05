@@ -67,6 +67,7 @@
             ClientSize = new Size(1561, 936);
             Controls.Add(StartGame);
             Controls.Add(windowFrame);
+            DoubleBuffered = true;
             KeyPreview = true;
             Name = "Form1";
             Text = "Form1";
