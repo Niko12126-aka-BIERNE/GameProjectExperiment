@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameProjectExperiment
+﻿namespace GameProjectExperiment
 {
     internal class FallingSprite(Location location, Bitmap image) : Sprite(location, image)
     {

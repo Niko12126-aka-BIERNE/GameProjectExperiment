@@ -1,6 +1,3 @@
-using System.Diagnostics;
-using System.Windows.Forms;
-
 namespace GameProjectExperiment
 {
     public partial class Form1 : Form
